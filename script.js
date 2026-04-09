@@ -11,8 +11,12 @@ const getSum = () => {
 	});
   const tot = document.createElement("tr");
   const tdata = document.createElement("td");
-	tdata.append(sum);
+	tdata.setAttribute("id", "ans"); // REQUIRED for test
+	tdata.setAttribute("colspan", "2");
+	tdata.textContent = sum;
+	
 	tot.appendChild(tdata);
+	
 	let table = document.getElementById('table');
 	table.appendChild(tot);
 };
